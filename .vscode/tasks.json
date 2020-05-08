@@ -9,7 +9,12 @@
 				"-g",
 				"${file}",
 				"-o",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"-static-libgcc", // 静态链接
+				"-I${workspaceFolder}/include",
+				"-I${workspaceFolder}/lib",
+				"-lglad",
+                "-lglfw3",
 			],
 			"options": {
 				"cwd": "C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin"
@@ -18,7 +23,7 @@
 				"$gcc"
 			],
 			"group": {
-				"kind": "build",
+				"kind": "test",
 				"isDefault": true
 			}
 		}
