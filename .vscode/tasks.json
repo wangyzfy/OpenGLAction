@@ -13,7 +13,7 @@
 				"-static-libgcc", // 静态链接
 				"-I${workspaceFolder}/include",
 				"-I${workspaceFolder}/lib",
-				"-lglad",
+				"-lopengl32",
                 "-lglfw3",
 			],
 			"options": {
